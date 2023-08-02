@@ -35,7 +35,7 @@ export default async function Home() {
           </h1>
           <h1 className="text-4xl font-bold md:text-7xl">Summer Sale</h1>
           <p>Discover our summer Styles with discount</p>
-          <Button className="flex gap-1.5">
+          <Button className="flex gap-1.5 dark:bg-slate-900 dark:text-slate-50">
             Shop Now <ArrowRight />
           </Button>
         </div>
@@ -64,7 +64,7 @@ export default async function Home() {
                     width={522}
                     height={568}
                     src={product.mainImage}
-                    className="w-48 md:w-72"
+                    className="w-48 rounded-3xl border-neutral-500 hover:border md:w-72"
                   />
                 </Link>
                 <div>

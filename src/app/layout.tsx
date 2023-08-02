@@ -5,8 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Icons } from "@/components/icons"
-import { ShoppingBag, Instagram, Twitter, Youtube } from "lucide-react"
-import { Button } from "@/components/ui/button"
+import { Instagram, Twitter, Youtube, Github } from "lucide-react"
 import Link from "next/link"
 import { CartButton } from "@/components/cart-button"
 
@@ -33,7 +32,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <header className="border-b py-4">
             <div className="container flex items-center justify-between">
-              <Icons.logo />
+              <Link href="/">
+                <Icons.logo />
+              </Link>
               <div className="space-x-3">
                 <ThemeToggle />
                 <CartButton />
@@ -41,11 +42,19 @@ export default function RootLayout({
             </div>
           </header>
           <main className="container mb-12 md:mb-24">{children}</main>
-          <footer className="mt-auto bg-neutral-800 py-4 text-white">
+          <footer className="mt-auto bg-neutral-800 py-4 text-white dark:bg-slate-800">
             <div className="container flex items-center justify-between gap-1.5">
               <Icons.logo />
               <p className="truncate text-xs text-white/60 md:text-sm">
-                © 2023 dot.cards text task. All rights reserved
+                Built by Apestein. The source code is available on{" "}
+                <a
+                  href="https://github.com/Apestein/sun-co"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-medium underline underline-offset-4"
+                >
+                  Github
+                </a>
               </p>
               <div className="flex gap-1.5 md:gap-3">
                 <Instagram />

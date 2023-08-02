@@ -12,7 +12,7 @@ export function CartButton() {
       <Link href="/cart" className="flex gap-1">
         <ShoppingBag />
         View Cart
-        <div className="grid h-5 w-5 place-content-center rounded-full bg-red-500 text-sm">
+        <div className="flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-sm">
           {cart.length}
         </div>
       </Link>

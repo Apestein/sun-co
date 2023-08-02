@@ -12,10 +12,12 @@ import { Product } from "@/types"
 import { useState } from "react"
 import { useAtom } from "jotai"
 import { cartAtom } from "@/lib/atoms"
+import { useToast } from "./ui/use-toast"
 
 export function AddToCartCard({ product }: { product: Product }) {
   const [quanity, setQuanity] = useState(1)
   const [cart, setCart] = useAtom(cartAtom)
+  const { toast } = useToast()
 
   function updateCart() {
     if (quanity === 0) return
@@ -28,6 +30,10 @@ export function AddToCartCard({ product }: { product: Product }) {
       )
     else setCart((prev) => [...prev, { ...product, quanity }])
     setQuanity(0)
+    toast({
+      title: "Action Completed",
+      description: `Added ${quanity} ${product.name} to cart!`,
+    })
   }
 
   return (
@@ -55,7 +61,7 @@ export function AddToCartCard({ product }: { product: Product }) {
             <input
               type="number"
               value={quanity}
-              className="remove-arrow w-12 text-center"
+              className="remove-arrow w-12 text-center dark:bg-transparent"
             />
             <Button
               variant="secondary"

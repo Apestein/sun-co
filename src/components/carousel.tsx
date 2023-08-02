@@ -44,8 +44,8 @@ export function SnapCarousel({ product }: { product: Product }) {
               key={i}
               onClick={() => goTo(i)}
               className={cn(
-                "h-2 w-2 rounded-full bg-black/20",
-                activePageIndex === i && "scale-125 bg-black",
+                "h-2 w-2 rounded-full bg-black/20 dark:bg-slate-800",
+                activePageIndex === i && "scale-125 bg-black dark:bg-white",
               )}
             />
           ))}
