@@ -5,7 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Icons } from "@/components/icons"
-import { Instagram, Twitter, Youtube, Github } from "lucide-react"
+import { Instagram, Twitter, Youtube } from "lucide-react"
 import Link from "next/link"
 import { CartButton } from "@/components/cart-button"
 

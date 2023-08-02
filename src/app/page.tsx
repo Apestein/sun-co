@@ -76,6 +76,7 @@ export default async function Home() {
             width={490}
             height={321}
             alt="hero-img"
+            priority
             className="md:hidden"
           />
           <h1 className="text-3xl font-bold text-orange-500 md:text-6xl">

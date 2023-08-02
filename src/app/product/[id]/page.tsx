@@ -92,6 +92,7 @@ export default async function Product({ params }: { params: { id: string } }) {
           alt="product-image"
           width={1056}
           height={746}
+          priority
           className="mt-4"
         />
       </section>
