@@ -3,7 +3,7 @@ import { SnapCarousel } from "@/components/carousel"
 import { AddToCartCard } from "@/components/add-to-cart"
 import Image from "next/image"
 
-export async function getProduct(id: string) {
+async function getProduct(id: string) {
   const env = process.env.NODE_ENV
   let apiURL = ""
   if (env === "development") apiURL = `http://localhost:3000/api/product/${id}`

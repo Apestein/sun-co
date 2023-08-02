@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react"
 import Link from "next/link"
 import { Product } from "@/types"
 
-export async function getProducts() {
+async function getProducts() {
   const env = process.env.NODE_ENV
   let apiURL = ""
   if (env === "development") apiURL = "http://localhost:3000/api/products"
