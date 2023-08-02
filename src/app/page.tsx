@@ -8,7 +8,7 @@ async function getProducts() {
   const env = process.env.NODE_ENV
   let apiURL = ""
   if (env === "development") apiURL = "http://localhost:3000/api/products"
-  else apiURL = "placeholder"
+  else apiURL = "https://sun-97ccrus01-apestein.vercel.app/api/products"
   const res = await fetch(apiURL, { cache: "no-store" })
   if (!res.ok) throw new Error("Failed to fetch data")
   return res.json() as Promise<Product[]>
