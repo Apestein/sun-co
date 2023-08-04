@@ -1,3 +1,5 @@
+const plugin = require("tailwindcss/plugin")
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: ["class"],
@@ -75,5 +77,15 @@ module.exports = {
   plugins: [
     require("tailwindcss-animate"),
     require("tailwind-scrollbar")({ nocompatible: true }),
+    plugin(({ addUtilities }) => {
+      addUtilities({
+        ".no-input-arrow::-webkit-inner-spin-button, .remove-arrow::-webkit-outer-spin-button":
+          {
+            "-webkit-appearance": "none",
+            margin: "0",
+          },
+        "no-input-arrow": { "-moz-appearance": "textfield" },
+      })
+    }),
   ],
 }

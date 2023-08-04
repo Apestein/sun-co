@@ -124,7 +124,7 @@ export default function Cart() {
                     <input
                       type="number"
                       value={item.quanity}
-                      className="remove-arrow w-12 text-center dark:bg-transparent"
+                      className="w-12 text-center no-input-arrow dark:bg-transparent"
                     />
                     <Button
                       variant="secondary"

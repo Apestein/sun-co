@@ -61,7 +61,7 @@ export function AddToCartCard({ product }: { product: Product }) {
             <input
               type="number"
               value={quanity}
-              className="remove-arrow w-12 text-center dark:bg-transparent"
+              className="w-12 text-center no-input-arrow dark:bg-transparent"
             />
             <Button
               variant="secondary"
